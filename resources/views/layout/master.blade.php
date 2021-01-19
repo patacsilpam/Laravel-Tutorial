@@ -2,70 +2,58 @@
 <html>
 <head>
 	<title>@yield('Title')</title>
-	<style type="text/css">
-		*{
-			margin:0;
-			padding:0;
-		}
-		body {
-  		position: relative;
-  		margin: 0;
- 		padding-bottom: 6rem;
- 		min-height: 100%;
-		}
-		#img-banner{
-			width: 100%;
-			height: 1080px;
-		}
-		main{
-			padding-top: 6rem;
-			text-align: center;
-		}
-		img{
-			width: 40%;
-		}
-		#img-footer{
-			width: 100%;
-			height: 70px;
-			bottom: 0;
-		}
-		footer{
-			position: absolute; 
-            bottom: 0; 
-            width: 100%; 
-            height: 40px; 
-		}
-	</style>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	 
 </head>
 <body>
-	<header>
-		<img src="/images/banner.jpg" title="banner" alt="banner" id="img-banner">
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">introspect</a>
+			<nav id="nav">
+				<a href="index">Home</a>
+				<a href="generic">Generic</a>
+				<a href="elements">Elements</a>
+			</nav>
+		</div>
 	</header>
-	<main>
-		<div>
-			<img src="/images/pic01.jpg" title="Picture 1" alt="Picture 1">
-			<img src="/images/pic02.jpg" title="Picture 2" alt="Picture 2">
+	<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+	<section>
+		@yield('section')
+	</section>
+	<!-- Footer -->
+	<section id="footer">
+		<div class="inner">
+			<header>
+				<h2>Get in Touch</h2>
+			</header>
+			<form method="post" action="#">
+				<div class="field half first">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field half">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="6"></textarea>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Send Message" class="alt" /></li>
+				</ul>
+			</form>
+			<div class="copyright">
+				&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
+			</div>
 		</div>
-		<div>
-			<img src="/images/pic03.jpg" title="Picture 3" alt="Picture 3">
-			<img src="/images/pic04.jpg" title="Picture 4" alt="Picture 4">
-		</div>
-		<div>
-			<img src="/images/pic05.jpg" title="Picture 5" alt="Picture 5">
-			<img src="/images/pic06.jpg" title="Picture 6" alt="Picture 6">
-		</div>
-		<div>
-			<img src="/images/pic07.jpg" title="Picture 7" alt="Picture 7">
-			<img src="/images/pic08.jpg" title="Picture 8" alt="Picture 8">
-		</div>
-		<div>
-			<img src="/images/pic09.jpg" title="Picture 9" alt="Picture 9">
-			<img src="/images/pic10.jpg" title="Picture 10" alt="Picture 10">
-		</div>
-	</main>
-	<footer>
-		<img src="/images/pic11.jpg" title="Picture 11" alt="Picture 11" id="img-footer">
-	</footer>
-	
+	</section>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 </body>
 </html>
