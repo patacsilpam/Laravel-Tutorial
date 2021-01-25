@@ -12,8 +12,7 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/index',[HomeController::class,'index']);
-Route::get('/generic',[HomeController::class,'generic']);
-Route::get('/elements',[HomeController::class,'elements']);
-
-
+//Route::get('/index',[HomeController::class,'index']);
+//Route::get('/index',[HomeController::class,'index']);
+Route::post('/index',[HomeController::class,'index']);
+Route::post('/display',[HomeController::class,'display']);
